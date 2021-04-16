@@ -1,0 +1,71 @@
+---
+title: "dev_history.Rmd empty"
+author: "Sébastien Rochette"
+date: "23/01/2021"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r development, include=FALSE}
+library(testthat)
+```
+
+<!--
+# Description of your package
+
+This will fill the description of your package.
+Add this chunk using `fusen::description_chunk()`
+--> 
+
+```{r description}
+# Describe your package
+fusen::fill_description(
+  pkg = here::here(),
+  fields = list(
+    Title = "Tools to Build the Annual Study of NYC Squirrel data",
+    Description = "The NYC Squirrel data includes the locations, fur coloration, activities, and bizarro behavior of over 2,000 City squirrels. The present package gives different tools to explore this dataset.",
+    `Authors@R` = c(
+      person("Sebastien", "Rochette", email = "sebastien@thinkr.fr", role = c("aut", "cre"), comment = c(ORCID = "0000-0002-1565-9313")),
+      person(given = "ThinkR", role = "cph")
+    )
+  )
+)
+# Define License with use_*_license()
+usethis::use_mit_license("Sébastien Rochette")
+# Use git
+usethis::use_git()
+```
+
+# My function
+
+```{r function-1}
+
+```
+
+```{r examples-1}
+
+```
+
+```{r tests-1}
+test_that("my_function works properly", {
+
+})
+```
+
+
+```{r development-1, eval=FALSE}
+# Run but keep eval=FALSE to avoid infinite loop
+# Execute in the console directly
+fusen::inflate(rmd = "dev/dev_history.Rmd")
+```
+
+<!-- # Inflate your package -->
+
+<!-- You're one inflate from paper to box. -->
+<!-- Build your package from this very Rmarkdown using `fusen::inflate()` -->
+
+<!-- - Verify your `"DESCRIPTION"` file has been updated -->
+<!-- - Verify your function is in `"R/"` directory -->
+<!-- - Verify your test is in `"tests/testthat/"` directory -->
+<!-- - Verify this Rmd appears in `"vignettes/"` directory -->
