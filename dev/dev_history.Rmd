@@ -37,7 +37,13 @@ usethis::use_mit_license("Sébastien Rochette")
 usethis::use_git()
 ```
 
-# My function
+# Check the validity of the entry dataset
+
+Because my dataset may be updated regularly, I need to be sure nothing as changed in its structure. I will build a function that checks the content of some columns of the dataset for instance:  
+
++ Verify positions are in New York, around central Park
++ Verify there is only one color in `primary_fur_color`
+  + A `+` in the column is a sign of multiple colours
 
 ```{r function-1, echo=TRUE}
 #' Check data integrity
