@@ -3,3 +3,8 @@
 ^LICENSE\.md$
 ^.*\.Rproj$
 ^\.Rproj\.user$
+^squirrels\.fusen\.Rproj$
+^\.git$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$

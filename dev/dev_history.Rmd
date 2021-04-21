@@ -18,7 +18,7 @@ This will fill the description of your package.
 Add this chunk using `fusen::description_chunk()`
 --> 
 
-```{r description}
+```{r description, eval=FALSE}
 # Describe your package
 fusen::fill_description(
   pkg = here::here(),
@@ -35,6 +35,7 @@ fusen::fill_description(
 usethis::use_mit_license("Sébastien Rochette")
 # Use git
 usethis::use_git()
+usethis::use_build_ignore(".git")
 ```
 
 # Check the validity of the entry dataset
@@ -106,7 +107,10 @@ test_that("check_data_integrity works correctly", {
 ```{r development-1, eval=FALSE}
 # Run but keep eval=FALSE to avoid infinite loop
 # Execute in the console directly
-fusen::inflate(rmd = "dev/dev_history.Rmd")
+fusen::inflate(rmd = "dev/dev_history.Rmd", name = "Find the squirrels !")
+# pkgdown
+usethis::use_pkgdown()
+pkgdown::build_site()
 ```
 
 <!-- # Inflate your package -->

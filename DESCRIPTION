@@ -1,15 +1,24 @@
 Package: squirrels.fusen
-Version: 0.0.0.9000
 Title: Tools to Build the Annual Study of NYC Squirrel data
-Description: The NYC Squirrel data includes the locations, fur coloration, activities, and bizarro behavior of over 2,000 City squirrels. The present package gives different tools to explore this dataset.
-Authors@R: c(person(given = "Sebastien",
-         family = "Rochette",
-         role = c("aut", "cre"),
-         email = "sebastien@thinkr.fr",
-         comment = c(ORCID = "0000-0002-1565-9313")),
-  person(given = "ThinkR",
-         role = "cph"))
+Version: 0.0.0.9000
+Authors@R: 
+    c(person(given = "Sebastien",
+             family = "Rochette",
+             role = c("aut", "cre"),
+             email = "sebastien@thinkr.fr",
+             comment = c(ORCID = "0000-0002-1565-9313")),
+      person(given = "ThinkR",
+             role = "cph"))
+Description: The NYC Squirrel data includes the locations, fur coloration,
+    activities, and bizarro behavior of over 2,000 City squirrels. The
+    present package gives different tools to explore this dataset.
 License: MIT + file LICENSE
+Suggests: 
+    knitr,
+    rmarkdown,
+    testthat
+VignetteBuilder: 
+    knitr
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)

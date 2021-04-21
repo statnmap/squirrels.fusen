@@ -1,0 +1,58 @@
+---
+title: "Find the squirrels !"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Find the squirrels !}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(squirrels.fusen)
+```
+
+<!--
+
+# Description of your package
+
+This will fill the description of your package.
+Add this chunk using `fusen::description_chunk()`
+--> 
+
+
+# Check the validity of the entry dataset
+
+Because my dataset may be updated regularly, I need to be sure nothing as changed in its structure. I will build a function that checks the content of some columns of the dataset for instance:  
+
++ Verify positions are in New York, around central Park
++ Verify there is only one color in `primary_fur_color`
+  + A `+` in the column is a sign of multiple colours
+
+
+```{r examples-1, echo = TRUE}
+# A working example
+my_data_example <- data.frame(
+  lat = c(40.77, 40.78),
+  long = c(-73.95, -73.96),
+  primary_fur_color = c("grey", "black")
+)
+check_data_integrity(my_data_example)
+```
+
+<!-- # Inflate your package -->
+
+<!-- You're one inflate from paper to box. -->
+<!-- Build your package from this very Rmarkdown using `fusen::inflate()` -->
+
+<!-- - Verify your `"DESCRIPTION"` file has been updated -->
+<!-- - Verify your function is in `"R/"` directory -->
+<!-- - Verify your test is in `"tests/testthat/"` directory -->
+<!-- - Verify this Rmd appears in `"vignettes/"` directory -->
+
