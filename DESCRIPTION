@@ -14,6 +14,7 @@ Description: The NYC Squirrel data includes the locations, fur coloration,
     present package gives different tools to explore this dataset.
 License: MIT + file LICENSE
 Suggests: 
+    covr,
     knitr,
     rmarkdown,
     testthat

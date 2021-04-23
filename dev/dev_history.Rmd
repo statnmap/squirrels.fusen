@@ -122,3 +122,14 @@ pkgdown::build_site()
 <!-- - Verify your function is in `"R/"` directory -->
 <!-- - Verify your test is in `"tests/testthat/"` directory -->
 <!-- - Verify this Rmd appears in `"vignettes/"` directory -->
+
+
+```{r development-extra, eval=FALSE}
+usethis::use_readme_rmd()
+usethis::use_github_action_check_standard()
+usethis::use_coverage()
+usethis::use_github_action("test-coverage")
+usethis::use_github_action("pkgdown")
+```
+
+
